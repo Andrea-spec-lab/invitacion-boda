@@ -356,8 +356,19 @@ footer p{
   }
  
   .event {
-    margin-left: 0px;
+    width: 50%;
+    position: relative;
   }
+
+    .event.left{ 
+        left: 0;
+        text-align: rigth;
+    }
+
+    .event.rigth {
+        left: 50%;
+        text-align: left;
+    }
  
   .event::before {
     left: 50%;
@@ -365,23 +376,14 @@ footer p{
   }
  
   .event .content {
-    width: 45%;
+    width: 85%;
   }
  
   .event .time {
-      position: relative;
-      right: auto;
-      left: auto;
-      display: block;
-      text-align: center;
-      margin-bottom: 4px;
+     display: block;
+      font-size: 12px;
   }
 
-.event.left, .event.right{
-    justify-content:center;
-    text-align: center;
-}
- 
   .event i {
     font-size: 16px;
   }
@@ -462,6 +464,7 @@ footer p{
   .block .img {
     height: auto;
   }
-
 }
+
+
 
