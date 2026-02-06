@@ -447,7 +447,7 @@ footer p{
     position: absolute;
     bottom: 10px;     
     left: 10px;      
-    width: 60px;      
+    width: 50px;      
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
@@ -465,6 +465,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
