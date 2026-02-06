@@ -1,235 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>¡Nos casamos! | [Nombre de la novia] & [Nombre del novio]</title>
-  <meta name="description" content="Invitación de boda digital con RSVP, mapa y cuenta regresiva" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fff9f6;
-      --card:#ffffff;
-      --ink:#1f2937;
-      --accent:#b71c1c;       /* rojo elegante */
-      --muted:#6b7280;
-      --ring:rgba(183,28,28,.15);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:Inter,system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height:1.6;
-    }
-    header.hero{
-      min-height:70vh;
-      display:grid; place-items:center;
-      text-align:center; padding:48px 20px;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),
-        url('assets/portada.jpg') center/cover no-repeat; /* ← reemplaza por tu foto */
-      color:white;
-    }
-    .hero h1{
-      font-family:"Playfair Display", serif;
-      font-size: clamp(36px, 6vw, 64px);
-      margin:0 0 8px;
-      letter-spacing:.5px;
-    }
-    .hero p{margin:0; opacity:.95}
-    .tag{
-      display:inline-block; padding:6px 12px; border-radius:999px;
-      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
-      margin-top:14px; font-weight:600; backdrop-filter: blur(6px);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    .wrap{max-width:980px; margin:0 auto; padding:28px 16px}
-    .section{background:var(--card); border-radius:20px; padding:26px; margin:18px 0; box-shadow:0 10px 25px -18px rgba(0,0,0,.3)}
-    .section h2{
-      font-family:"Playfair Display", serif;
-      margin-top:0; font-size:clamp(22px, 3.2vw, 32px)
-    }
-    .grid-2{display:grid; gap:18px; grid-template-columns: 1fr}
-    @media (min-width:760px){ .grid-2{ grid-template-columns:1fr 1fr } }
-
-    .info{display:grid; gap:10px}
-    .info .item{display:flex; gap:12px; align-items:flex-start}
-    .icon{
-      width:36px; height:36px; flex:0 0 36px; border-radius:10px;
-      display:grid; place-items:center; background:#ffeceb; color:var(--accent);
-      border:1px solid #ffd0d0
-    }
-    .muted{color:var(--muted)}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      background:var(--accent); color:white; padding:12px 18px; border-radius:12px;
-      text-decoration:none; font-weight:600; box-shadow:0 8px 16px -10px var(--accent);
-      border:1px solid rgba(0,0,0,.06)
-    }
-    .btn.ghost{
-      background:white; color:var(--accent); border:1px solid #f4caca;
-    }
-    .btn:focus{outline:4px solid var(--ring)}
-
-    /* Cuenta regresiva */
-    .countdown{
-      display:grid; grid-template-columns: repeat(4, minmax(70px, 1fr)); gap:12px; text-align:center
-    }
-    .box{
-      background:#fff2f2; border:1px solid #ffd6d6; border-radius:14px; padding:16px
-    }
-    .num{font-size:28px; font-weight:700}
-    .lbl{font-size:12px; color:var(--muted); letter-spacing:.6px; text-transform:uppercase}
-
-    /* Galería */
-    .gallery{display:grid; gap:12px; grid-template-columns:repeat(2, 1fr)}
-    @media (min-width:760px){ .gallery{grid-template-columns:repeat(4, 1fr)} }
-    .gallery img{width:100%; height:220px; object-fit:cover; border-radius:14px}
-
-    footer{
-      text-align:center; color:var(--muted); padding:40px 12px 60px
-    }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+    <title>R&R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-  <!-- Portada -->
-  <header class="hero">
-    <div>
-      <div class="tag">¡Nos casamos!</div>
-      <h1>[Nombre de la novia] & [Nombre del novio]</h1>
-      <p>Te invitamos a celebrar con nosotros este gran día</p>
+    <!-- PORTADA -->
+    <section class="hero">
+        <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto-portada.png" alt="Decoración" class="hero-img">
+        <p>Nuestra Boda</p>
+        <div class="date">26 · 06 · 2026 </div>
+        <div id="countdown" class="countdown"></div>
+    </section>
+
+    <div class="wrapper">
+
+            <!-- PADRES -->
+        <section class="section reveal parents">
+            <p class="blessing">
+            Con la gracia de Dios y la bendicion de nuestros padres
+            </p>
+
+            <div class="parents-names">
+                <div>
+                    <p class="role">Padres de la novia</p>
+                    <p></p> 
+                    <p></p>
+                </div>
+
+                <div>
+                    <p class="role">Padre del novio</p>
+                 <p></p>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+
+            <p class="us">Nosotros</p>
+            <h2 class="couple">Regina Macias & Raul Betancourt</h2>
+            <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\us-img.jpg" alt="Decoración" class="us-img">
+
+        </section>
+
+            <!-- MENSAJE -->
+        <section class="section reveal">
+            <p>Tenemos el honor de invitarlos a compartir con nosotros este dia tan especial</p>
+        </section>
+
+             <!-- FECHA Y LUGAR -->
+        <section class="section reveal">
+            <h2>Detalles del evento</h2>
+            <p><strong>Ceremonia</strong><br> 5:00 pm <br>
+          Parroquia del Rosario - Capilla San Roberto Belarmino</p>
+            <a href="https://maps.app.goo.gl/N9Kit96j9sR4eEpV8" target="_blank" class="button"><i class="fa-solid fa-location-dot icon"></i>Ver ubicacion</a>
+
+            <br>
+
+            <p><strong>Recepcion</strong>
+            <br>7:30 pm<br>
+            Atrium Eventos Monterrey</p>
+            <a href="https://maps.app.goo.gl/6RY3cdQLL4Y11Jed9" target="_blank" class="button"><i class="fa-solid fa-location-dot icon"></i>Ver ubicacion</a>
+        </section>
+
+            <!--ITINERARIO-->
+        <section class="section">
+  <h2 class="it-title">Itinerario</h2>
+ 
+  <div class="timeline">
+ 
+    <div class="event left">
+      <span class="time">5:00 pm</span>
+      <div class="content">
+        <i class="fa-solid fa-church"></i>
+        <p><strong>Iglesia</strong></p>
+      </div>
     </div>
-  </header>
+ 
+    <div class="event right">
+      <span class="time">7:30 pm</span>
+      <div class="content">
+        <i class="fa-solid fa-champagne-glasses"></i>
+        <p><strong>Recepción</strong></p>
+      </div>
+    </div>
+ 
+    <div class="event left">
+      <span class="time">8:30 pm</span>
+      <div class="content">
+        <i class="fa-solid fa-heart"></i>
+        <p><strong>Vals</strong></p>
+      </div>
+    </div>
+ 
+    <div class="event right">
+      <span class="time">9:00 pm</span>
+      <div class="content">
+        <i class="fa-solid fa-utensils"></i>
+        <p><strong>Cena</strong></p>
+      </div>
+    </div>
+ 
+    <div class="event left">
+      <span class="time">10:00 pm</span>
+      <div class="content">
+        <i class="fa-solid fa-music"></i>
+        <p><strong>Fiesta</strong></p>
+      </div>
+    </div>
+ 
+    <div class="event right">
+      <span class="time">1:00 am</span>
+      <div class="content">
+        <i class="fa-solid fa-champagne-glasses"></i>
+        <p><strong>Tornaboda</strong></p>
+      </div>
+    </div>
+ 
+  </div>
+</section>
 
-  <main class="wrap">
-    <!-- Detalles -->
-    <section class="section grid-2">
-      <div>
-        <h2>La Celebración</h2>
-        <div class="info">
-          <div class="item">
-            <div class="icon">📅</div>
-            <div>
-              <strong>Fecha</strong><br>
-              <span class="muted">Sábado, 12 de septiembre de 2026</span> <!-- ← CAMBIA -->
+            <!-- DRESS CODE Y REGALOS -->
+        <section class="section reveal">
+            <h2>Dress Code</h2>
+            <p>
+                <i class="fa-solid fa-user-tie icon"></i>
+                Formal</p>
+    
+            <br>
+
+            <h2>Mesa de regalos</h2>
+                <p>Tu presencia es nuestro mejor regalo<br>
+                <i class="fa-solid fa-envelope icon"></i>Si desean obsequiarnos algo, pueden hacerlo por transferencia o sobre. </p>
+        
+                <p class="small">
+                    Banco: <br>
+                    Cuenta: <br>
+                    Nombre: 
+                </p>
+        </section>
+
+                <!-- GALERIA -->
+        <section class="section reveal">
+            <h2>Nuestros momentos</h2>
+            <div class="gallery">
+              <div class="block left fade-in">
+        
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto2.jpg" alt="Novios">
+                <div class="stack fade-in">
+                  <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto1.jpg" alt="Novios">
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto3.jpg" alt="Novios">
+                
+                </div>
+              </div>
+
+              <div class="block right fade-in">
+                <div class="stack fade-in">
+                
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto6.jpg" alt="Novios">
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto7.jpg" alt="Novios">
+                </div>
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto4.jpg" alt="Novios">
+              </div>
+            
+
+                <div class="block left fade-in">
+                 
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto5.jpg" alt="Novios">
+                <div class="stack fade-in">
+                  <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto9.jpg" alt="Novios">
+                <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\foto8.jpg" alt="Novios">
+                </div>
+                </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="icon">⏰</div>
-            <div>
-              <strong>Hora</strong><br>
-              <span class="muted">Ceremonia 5:00 PM · Recepción 7:00 PM</span> <!-- ← CAMBIA -->
-            </div>
-          </div>
-          <div class="item">
-            <div class="icon">📍</div>
-            <div>
-              <strong>Lugar</strong><br>
-              <span class="muted">Hacienda [Nombre], Pesquería, N.L., México</span> <!-- ← CAMBIA -->
-            </div>
-          </div>
+        </section>
+`
+                <!-- RSVP -->
+        <section class="section reveal">
+            <h2>Confirmar asistencia</h2>
+            <p class="small">Favor de confirmar antes del </p>
+
+            <iframe
+            src="">
+            </iframe>
+        </section>
+
+        <section class="section no-kids">
+            <h2>SIN NIÑOS</h2>
+            <p>
+                Un evento para adultos esta en camino. Asi que preparemonos para la diversion<br>
+                Dejemos a los niños en casa esta vez.
+            </p>
+             <img src="C:\Users\k301052102790\Documents\Invitacion boda R&R\Fotos\wax-seal-black.png" alt="Decoración" class="corner-img">
+        </section>
+    
         </div>
 
-        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
-          <!-- Enlaces de navegación -->
-          <a class="btn" target="_blank"
-             href="https://www.google.com/maps/dir/?api=1&destination=25.7798,-100.1077">
-            Abrir en Google Maps
-          </a>
-          <a class="btn ghost" target="_blank"
-             href="https://waze.com/ul?ll=25.7798,-100.1077&navigate=yes">
-            Abrir en Waze
-          </a>
-        </div>
-        <p class="muted" style="margin-top:8px">
-          *Nadie se perderá. Enlaces directos a la ceremonia y el convite.
-        </p>
-      </div>
+            <!-- FOOTER -->
+        <footer>
+            <p>
+                ¡Los esperamos con mucho cariño!
+            </p>
+        </footer>
 
-      <!-- Cuenta regresiva -->
-      <div>
-        <h2>Cuenta Atrás</h2>
-        <div id="countdown" class="countdown" aria-live="polite">
-          <div class="box"><div class="num" id="d">--</div><div class="lbl">DÍAS</div></div>
-          <div class="box"><div class="num" id="h">--</div><div class="lbl">HORAS</div></div>
-          <div class="box"><div class="num" id="m">--</div><div class="lbl">MIN</div></div>
-          <div class="box"><div class="num" id="s">--</div><div class="lbl">SEG</div></div>
-        </div>
-        <p class="muted" style="margin-top:10px">Un contador dinámico hasta el “Sí, quiero”.</p>
-      </div>
-    </section>
+    <script>
+    //Countdown 
+        const weddingDate = new Date("2026-06-26T15:00:00");
+ 
+        function updateCountdown() {
+        const now = new Date();
+        const distance = weddingDate - now;
+ 
+         if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "¡Hoy es el gran día!";
+        return;
+        }
+ 
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+ 
+        document.getElementById("countdown").innerHTML =
+        days + " días " + hours + " hrs " + minutes + " min " + seconds + " seg";
+        }
+ 
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
 
-    <!-- RSVP -->
-    <section class="section">
-      <h2>Confirmación de Asistencia (RSVP)</h2>
-      <p>Ayúdanos confirmando tu asistencia con un clic. Podrás indicarnos acompañantes, alergias y transporte.</p>
+   
+// === SCROLL ANIMATION ===
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
 
-      <!-- Opción A: Google Form -->
-      <a class="btn" target="_blank" href="https://forms.gle/TU_FORMULARIO">Confirmar en Google Forms</a>
-
-      <!-- Opción B: WhatsApp (quítala si usas Forms) -->
-      <a class="btn ghost" target="_blank"
-         href="https://wa.me/5218180000000?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20[Novia]%20y%20[Novio].">
-         Confirmar por WhatsApp
-      </a>
-    </section>
-
-    <!-- Galería -->
-    <section class="section">
-      <h2>Nuestra Historia en Fotos</h2>
-      <div class="gallery">
-        <!-- Reemplaza las rutas por tus imágenes -->
-        <img src="assets/galeria1.jpg" alt="Foto 1 de los novios">
-        <img src="assets/galeria2.jpg" alt="Foto 2 de los novios">
-        <img src="assets/galeria3.jpg" alt="Foto 3 de los novios">
-        <img src="assets/galeria4.jpg" alt="Foto 4 de los novios">
-      </div>
-    </section>
-
-    <!-- Nota final -->
-    <section class="section">
-      <h2>Detalles Extra</h2>
-      <ul>
-        <li>Código de vestimenta: <strong>Etiqueta</strong></li>
-        <li>Mesa de regalos: <a href="#" target="_blank">lista.com/novios</a></li>
-        <li>Niños: <em>Amamos a los peques, pero esta vez será solo adultos</em></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    Con cariño, [Nombre de la novia] & [Nombre del novio] • #Boda[Apellidos]
-  </footer>
-
-  <script>
-    // === Cuenta regresiva ===
-    // Establece tu fecha/hora objetivo (usa tu zona horaria):
-    // Formato: AAAA-MM-DDTHH:MM:SS
-    const target = new Date("2026-09-12T17:00:00").getTime(); // ← CAMBIA
-
-    const $d = document.getElementById("d");
-    const $h = document.getElementById("h");
-    const $m = document.getElementById("m");
-    const $s = document.getElementById("s");
-
-    function tick(){
-      const now = Date.now();
-      const diff = Math.max(0, target - now);
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000*60*60)) % 24);
-      const mins = Math.floor((diff / (1000*60)) % 60);
-      const secs = Math.floor((diff / 1000) % 60);
-
-      $d.textContent = String(days);
-      $h.textContent = String(hours).padStart(2, "0");
-      $m.textContent = String(mins).padStart(2, "0");
-      $s.textContent = String(secs).padStart(2, "0");
+      // Para no volver a animar cada vez que se hace scroll
+      observer.unobserve(entry.target);
     }
-    tick();
-    setInterval(tick, 1000);
-  </script>
-</body>
+  });
+}, { threshold: 0.15 });
+
+// Elementos que animarán
+document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
+  .forEach(el => observer.observe(el));
+
+    </script>
+
+    </body>
 </html>
