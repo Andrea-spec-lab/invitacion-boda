@@ -20,14 +20,6 @@ body {
     padding-top: 12vh;
 }
 
-.hero p{
-    margin-top: 25px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-}
-
-
 .hero .hero-img {
     position: absolute;
     top: 20px;     
@@ -39,7 +31,7 @@ body {
 }
 
 .date {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 1.5rem;
     letter-spacing: 4px;
 }
@@ -454,6 +446,7 @@ footer p{
   }
 
 }
+
 
 
 
