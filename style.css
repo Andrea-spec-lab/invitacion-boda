@@ -46,7 +46,7 @@ body {
 
 .countdown {
     margin-top: 25px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
 }
 
@@ -365,13 +365,22 @@ footer p{
   }
  
   .event .content {
-    width: 40%;
+    width: 45%;
   }
  
   .event .time {
-    font-size: 11px;
-    margin-bottom: 3px;
+      position: relative;
+      right: auto;
+      left: auto;
+      display: block;
+      text-align: center;
+      margin-bottom: 4px;
   }
+
+.event.left, .event.right{
+    justify-content:center;
+    text-align: center;
+}
  
   .event i {
     font-size: 16px;
@@ -455,3 +464,4 @@ footer p{
   }
 
 }
+
