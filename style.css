@@ -144,8 +144,9 @@ ul {
 }
 
 
-/* ================= ITINERARIO ================= */
+/* ===================== ITINERARIO ===================== */
 
+/* Título */
 .it-title{
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
@@ -154,50 +155,82 @@ ul {
   margin-bottom: 8px;
   text-align: center;
 }
+
+/* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
   position: relative;
   margin: 40px auto;
   width: 100%;
   max-width: 800px;
+
   display: grid;
-  grid-template-columns: 1fr 2rem 1fr;  /* izq | línea | der */
+  grid-template-columns: 1fr 2rem 1fr;
   column-gap: 24px;
   row-gap: 28px;
 }
 
+/* Línea vertical central */
 .timeline::before{
   content:"";
   position:absolute;
   left:50%;
-  top:0; bottom:0;
+  top:0;
+  bottom:0;
   width:2px;
   background:#2b2b2b;
   transform:translateX(-50%);
-  z-index:0;                    /* ⬅️ línea detrás */
+  z-index:0; /* la línea va detrás */
 }
 
-/* ⬅️ CRÍTICO: cada event ocupa la fila completa del grid padre */
+/* Cada evento debe ocupar una fila completa del grid padre */
 .timeline > .event{
   grid-column: 1 / -1;
 }
 
+/* Cada evento es un mini-grid de 3 columnas y 2 filas:
+   Fila 1: hora (arriba)
+   Fila 2: contenido (abajo) */
 .event{
-  display:grid;                 /* mini-grid por fila */
-  grid-template-columns: 1fr 2rem 1fr;
+  display:grid;                         
+  grid-template-columns: 1fr 2rem 1fr;  /* izq | línea | der */
+  grid-template-rows: auto auto;        /* 1: hora, 2: contenido */
   align-items:center;
   position:relative;
 }
 
+/* Puntito centrado en la columna de la línea, a mitad entre hora y contenido */
 .event::after{
   content:"";
-  grid-column:2;                /* punto en la columna de la línea */
+  grid-column: 2;        
+  grid-row: 1 / 3;       
   justify-self:center;
-  width:10px; height:10px;
+  align-self:center;
+  width:10px;
+  height:10px;
   background:#2b2b2b;
   border-radius:50%;
-  z-index:1;                    /* por delante de la línea */
+  z-index:1;            
 }
 
+/* ----- Hora (encima) ----- */
+.event .time{
+  color:#555;
+  font-size:0.9rem;
+  line-height:1;
+  white-space:nowrap;
+  margin:0 0 6px 0;     
+  z-index:1;
+}
+
+/* Hora y contenido del lado izquierdo */
+.event.left  .time   { grid-column: 1 / 2; grid-row: 1; justify-self: end;  text-align: right; }
+.event.left  .content{ grid-column: 1 / 2; grid-row: 2; justify-self: end;  text-align: right; }
+
+/* Hora y contenido del lado derecho */
+.event.right .time   { grid-column: 3 / 4; grid-row: 1; justify-self: start; text-align: left; }
+.event.right .content{ grid-column: 3 / 4; grid-row: 2; justify-self: start; text-align: left; }
+
+/* ----- Contenido (icono + texto) ----- */
 .event .content{
   position:relative;
   display:inline-flex;
@@ -207,25 +240,35 @@ ul {
   background:transparent;
   line-height:1.2;
   border-radius:10px;
-  z-index:1;                    /* por delante de la línea */
+  z-index:1; 
 }
 
-/* Lados */
-.event.left  .content{ grid-column:1 / 2; justify-self:end;   text-align:right; }
-.event.right .content{ grid-column:3 / 4; justify-self:start; text-align:left; }
+.event i{
+  font-size:18px;
+  display:inline-block;
+  transform: translateY(-1px);
+}
 
-/* Responsive: mantiene alternado */
+.event .content p{ margin:0; }
+.event .content strong{ font-weight:700; }
+
+/* ============ Responsive (móvil) ============ */
 @media (max-width: 600px){
   .timeline{
-    grid-template-columns: 1fr 1.6rem 1fr;
-    column-gap:14px; row-gap:22px; padding:0 6px;
+    grid-template-columns: 1fr 1.6rem 1fr; /* línea un poco más delgada */
+    column-gap:14px;
+    row-gap:22px;
+    padding:0 6px;
   }
   .timeline > .event{
-    grid-column: 1 / -1;        /* se mantiene */
+    grid-column: 1 / -1; /* mantener cada evento en su propia fila */
   }
   .event{
-    grid-template-columns: 1fr 1.6rem 1fr;
+    grid-template-columns: 1fr 1.6rem 1fr; /* mini-grid consistente */
+    grid-template-rows: auto auto;         /* hora arriba */
   }
+  .event .time{ font-size:0.85rem; margin-bottom:5px; }
+  .event i{ font-size:16px; }
 }
 
 
@@ -411,6 +454,7 @@ footer p{
   }
 
 }
+
 
 
 
