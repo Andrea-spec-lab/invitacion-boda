@@ -335,10 +335,6 @@ iframe {
     .hero h1 {
         font-size: 4rem;
     }
-
-    .no-kids {
-        min-heigth: auto;
-        padding: 60px 20px;
 }
 
 footer {
@@ -368,8 +364,7 @@ footer p{
   }
  
   .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 10px;
   }
  
   .event {
@@ -379,8 +374,7 @@ footer p{
   }
  
   .event::before {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 10px;
   }
  
   .event .content {
@@ -473,9 +467,4 @@ footer p{
   .block .img {
     height: auto;
   }
-
 }
-
-
-
-
