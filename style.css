@@ -15,7 +15,7 @@ body {
 .hero {
     background: #000;
     color: #fff;
-    height:40vh;
+    height:35vh;
     text-align: center;
     padding-top: 12vh;
 }
@@ -431,3 +431,4 @@ footer p{
   }
 
 }
+
