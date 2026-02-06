@@ -159,14 +159,21 @@ ul {
   margin: 40px auto;
   width: 100%;
   max-width: 800px;
-  padding: 0 20px;
+ 
+/* Grid de 3 columnas: izquierda | línea | derecha */
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
+  column-gap: 24px;
+  row-gap: 28px;
 }
+
  
 .timeline::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
+  bottom: 0;
   width: 2px;
   height: 100%;
   background: #2b2b2b;
@@ -174,9 +181,7 @@ ul {
 }
  
 .event {
-  display: flex;
-  width: 100%;
-  margin-bottom: 40px;
+  display: contents;
   position: relative;
 }
  
@@ -188,54 +193,60 @@ ul {
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top: 12px;
   transform: translateX(-50%);
 }
- 
-.event.left {
-  justify-content: flex-start;
+
+
+.event .content {
+  position: relative;
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+  justify-self: end;   
   text-align: right;
 }
- 
-.event.right {
-  justify-content: flex-end;
-  text-align: left;
-}
- 
-.event .content {
-  width: 40%;
-  font-size: 14px;
-}
- 
+
+
+.event.left .content  { grid-column: 1 / 2; justify-self: end;  text-align: right; }
+.event.right .content { grid-column: 3 / 4; justify-self: start; text-align: left; }
+
+
 .event .time {
-  font-size: 12px;
   color: #555;
-  display: block;
-  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
 }
- 
+
 .event i {
   font-size: 18px;
-  margin-bottom: 6px;
-  display: block;
+  display: inline-block;
+  transform: translateY(-1px);
 }
 
-
-.event.left .time {
+/* Ubicamos el punto al centro vertical de cada content */
+.event .content::before {
+  content: "";
   position: absolute;
-  right: calc(50% + 14px);   
-  width: 120px;              
-  text-align: right;         
-  top: 6px;                  
-  line-height: 1;
+  top: 50%;
+  /* ancla visual hacia la línea */
+  width: 0; height: 0; /* solo usamos para calcular top */
+}
+/* El punto hereda la fila mediante margin-top sobre el pseudo del evento */
+.event::after {
+  /* 50% de la altura del content menos (alto del punto/2) + padding top */
+  margin-top: calc(14px + (1em * 0.5));
 }
 
+/* Ajustes tipográficos y separación */
+.event .content p { margin: 0; }
+.event .content strong { font-weight: 700; }
 
-.icon {
-  margin-right: 6px;
-  font-size: 14px;
-  opacity: 0.7;
-}
 
 /*FOTOS*/
 .gallery {
@@ -343,52 +354,25 @@ footer p{
 }
 
 /*CELULAR*/ 
+
 @media (max-width: 600px) {
- 
   .timeline {
-    max-width: 100%;
-    padding-left: 0 10px;
-  }
- 
-  .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
- 
-  .event {
-    width: 50%;
-    position: relative;
+    grid-template-columns: 1fr 1.6rem 1fr; /* línea un poco más delgada */
+    column-gap: 14px;
+    row-gap: 22px;
+    padding: 0 6px;
   }
 
-    .event.left{ 
-        left: 0;
-        text-align: rigth;
-    }
-
-    .event.rigth {
-        left: 50%;
-        text-align: left;
-    }
- 
-  .event::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
- 
   .event .content {
-    width: 85%;
-  }
- 
-  .event .time {
-     display: block;
-      font-size: 12px;
+    padding: 8px 8px;
+    gap: 6px;
+    font-size: 0.95rem;
   }
 
-  .event i {
-    font-size: 16px;
-  }
- 
+  .event .time { font-size: 0.85rem; }
+  .event i { font-size: 16px; }
 }
+
  
 /* --- ANIMACIONES GENERALES --- */
 
@@ -447,7 +431,7 @@ footer p{
     position: absolute;
     bottom: 10px;     
     left: 10px;      
-    width: 50px;      
+    width: 60px;      
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
@@ -465,7 +449,3 @@ footer p{
     height: auto;
   }
 }
-
-
-
-
