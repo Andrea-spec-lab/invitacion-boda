@@ -537,29 +537,6 @@ footer p{
 
 }
 
-/* Celulares pequeños (tipo iPhone SE) */
-@media (max-width: 360px) {
-  .stack {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-@media (max-width: 900px) {
-  .block {
-    grid-template-columns: 1fr;
-  }
-
-  .stack {
-    grid-template-rows: auto;
-  }
-
-  .block.left img:first-child,
-  .block.right img:last-child {
-    grid-row: auto;
-  }
-}
-
 
 
 
