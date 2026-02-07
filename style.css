@@ -14,16 +14,16 @@ body {
 /*Hero*/
 .hero {
     background: #fff;
-    height:5vh;
+    height:2vh;
     text-align: center;
     padding-top: 12vh;
 }
 
-.wrapper .hero-img {
+.hero .hero-img {
     position: absolute;
     top: 20px;     
     left: 50%;      
-    width: 60px;      
+    width: 40px;      
     opacity: 0.9; 
     transform: translateX(-50%);
     z-index: 5
@@ -448,6 +448,7 @@ footer p{
   }
 
 }
+
 
 
 
