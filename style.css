@@ -168,6 +168,17 @@ ul {
   text-align: center;
 }
 
+.timeline {
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+section:has(.timeline) {
+  background: #f7f4ef;
+}
+
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
   position: relative;
@@ -466,6 +477,7 @@ footer p{
   }
 
 }
+
 
 
 
