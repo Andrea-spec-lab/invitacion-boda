@@ -68,6 +68,10 @@ body {
 
 /*PADRES*/
 
+.parents{
+    padding-bottom: 5px;
+}
+
 .us {
     margin-top:0px !important;
     margin-bottom: 8px;
@@ -486,6 +490,7 @@ footer p{
   }
 
 }
+
 
 
 
