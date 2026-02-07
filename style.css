@@ -403,7 +403,7 @@ section:has(.timeline) {
 .no-kids {
     background: #f7f4ef;
     text-align: center;
-    padding: 50px 25px;
+    padding: 20px 25px;
     margin-top: 30px;
     font-size: 13px;
     letter-spacing: 1px;
@@ -528,6 +528,7 @@ footer p{
   }
 
 }
+
 
 
 
