@@ -274,26 +274,18 @@ document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
   .forEach(el => observer.observe(el));
 
         //RSVP 
-        const form = document.getElementById("rsvpForm");
+const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
 
 form.addEventListener("submit", function(e){
   e.preventDefault();
 
-  const data = {
-    nombre: form.nombre.value,
-    asistencia: form.asistencia.value,
-    personas: form.personas.value
-  };
+  const formData = new FormData(form);
 
   fetch("https://script.google.com/macros/s/AKfycbzr82QGN3jnRnQA3XyQwvgiBQMo1XSuBD5fpnBFbXzFdy3amyFHsAPTcb6OX2KIdaOLxw/exec", {
     method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
+    body: formData
   })
-  .then(res => res.json())
   .then(() => {
     msg.textContent = "¡Gracias por confirmar tu asistencia!";
     form.reset();
@@ -307,6 +299,7 @@ form.addEventListener("submit", function(e){
     </body>
 
 </html>
+
 
 
 
