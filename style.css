@@ -360,12 +360,40 @@ section:has(.timeline) {
 }
 
 /*RSVP*/
-iframe {
-    width: 50%;
-    height: 900px;
-    border: none;
-    margin-top: 10px;
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 20px auto 0;
 }
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.rsvp-form button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#formMsg {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
 
 .no-kids {
     background: #f7f4ef;
@@ -495,6 +523,7 @@ footer p{
   }
 
 }
+
 
 
 
