@@ -164,13 +164,13 @@ ul {
   font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
 .timeline {
   background: #fff;
-  padding: 25px 15px;
+  padding: 30px 20px;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
@@ -477,6 +477,7 @@ footer p{
   }
 
 }
+
 
 
 
