@@ -276,10 +276,14 @@ document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
         //RSVP 
 const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
-
+const button = form.querySelector("button");
+        
 form.addEventListener("submit", function(e){
   e.preventDefault();
 
+      button.disabled = true;
+  msg.textContent = "Confirmando...";
+  msg.style.color = "#555";
   const formData = new FormData(form);
 
   fetch("https://script.google.com/macros/s/AKfycbxH5rSPX3M3ISzBYQP6Ici11fnEX2yuOzr5seGp__Bw1AHsI14cMIDe__O2lOI_-lr0LQ/exec", {
@@ -288,10 +292,14 @@ form.addEventListener("submit", function(e){
   })
   .then(() => {
     msg.textContent = "¡Gracias por confirmar tu asistencia!";
+     msg.style.color = "#000";
     form.reset();
+    button.disabled = false;
   })
   .catch(() => {
     msg.textContent = "Error al enviar. Intenta de nuevo.";
+          msg.style.color = "red";
+    button.disabled = false;
   });
 });
     </script>
@@ -299,6 +307,7 @@ form.addEventListener("submit", function(e){
     </body>
 
 </html>
+
 
 
 
