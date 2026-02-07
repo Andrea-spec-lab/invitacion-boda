@@ -60,7 +60,8 @@ body {
 /*PADRES*/
 
 .us {
-    margin-top:-10px;
+    margin-top:-40px;
+    margin-bottom: 10px;
 }
 
 .blessing {
@@ -72,6 +73,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    margin-top:10px;
 }
 
 .parents-names div{
@@ -79,23 +81,24 @@ body {
 }
 
 .role {
-    font-size: 0.2rem;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #777;
+    color: #999;
     margin-bottom: 5px;
 }
 
 .parents-names p {
-    font-size: 30px;
+    font-size: 15px;
     font-style: italic;
+    line-height:1.6;
 }
 
 .couple {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    margin-top: 8px;
+    font-size: 36xp;
+    letter-spacing: 3px;
+    margin-top: 15px;
 }
 
 .us-img {
@@ -453,6 +456,7 @@ footer p{
   }
 
 }
+
 
 
 
