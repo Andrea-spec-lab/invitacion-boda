@@ -522,21 +522,26 @@ footer p{
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
 
-@media (max-width:600px){
+@media (max-width: 600px) {
   .block {
     grid-template-columns: 1fr;
   }
 
-  .stack{
+  .stack {
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
-  .block .img {
-    height: auto;
+  .block.left img:first-child,
+  .block.right img:last-child {
+    grid-row: auto;
   }
 
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
 }
-
 
 
 
