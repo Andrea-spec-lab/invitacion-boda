@@ -13,7 +13,7 @@ body {
 
 /*Hero*/
 .hero {
-    background: #000;
+    background: #fff;
     color: #fff;
     height:20vh;
     text-align: center;
@@ -37,10 +37,11 @@ body {
 }
 
 .countdown {
-    margin-top: 25px;
+    margin-top: -30px;
     font-size: 1.2rem;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    background: #fff;
+    color:#000;
 }
 
 /*CONTENEDOR*/
@@ -446,6 +447,7 @@ footer p{
   }
 
 }
+
 
 
 
