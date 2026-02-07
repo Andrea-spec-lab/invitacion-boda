@@ -297,6 +297,11 @@ section:has(.timeline) {
   .event i{ font-size:16px; }
 }
 
+.dress-img {
+  width: 90px;
+  margin: 10px auto;
+  display: block;
+}
 
 /*FOTOS*/
 .gallery {
@@ -480,6 +485,7 @@ footer p{
   }
 
 }
+
 
 
 
