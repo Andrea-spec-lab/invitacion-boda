@@ -14,7 +14,7 @@ body {
 /*Hero*/
 .hero {
     background: #fff;
-    height:20vh;
+    height:10vh;
     text-align: center;
     padding-top: 12vh;
 }
@@ -23,7 +23,7 @@ body {
     position: absolute;
     top: 20px;     
     left: 50%;      
-    width: 120px;      
+    width: 60px;      
     opacity: 0.9; 
     transform: translateX(-50%);
     z-index: 5
@@ -446,6 +446,7 @@ footer p{
   }
 
 }
+
 
 
 
