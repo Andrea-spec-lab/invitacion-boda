@@ -528,7 +528,6 @@ footer p{
   }
 
   .stack{
-    grid-template-columns: 1fr 1fr; /*Agregado*/
     grid-template-rows: auto;
   }
 
@@ -560,6 +559,7 @@ footer p{
     grid-row: auto;
   }
 }
+
 
 
 
