@@ -15,12 +15,12 @@ body {
 .hero {
     background: #fff;
     text-align: center;
-    padding-top:20vh;
+    padding-top:5vh;
 }
 
 .hero .hero-img {
     position: absolute;
-    top: 20px;     
+    top: 30px;     
     left: 50%;      
     width: 28px;      
     opacity: 0.9; 
@@ -48,7 +48,7 @@ body {
 }
 
 .invite-block{
-    margin-top: -80px;
+    margin-top: -40px;
 }
 
 /*CONTENEDOR*/
@@ -465,6 +465,7 @@ footer p{
   }
 
 }
+
 
 
 
