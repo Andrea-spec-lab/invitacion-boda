@@ -168,30 +168,16 @@ ul {
   text-align: center;
 }
 
+.timeline {
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
 section:has(.timeline) {
   background: #f7f4ef;
-  position: relative;
 }
-
-section:has(.timeline)::before,
-section:has(.timeline)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: radial-gradient(circle at 10px -5px, transparent 12px, #f7f4ef 13px);
-}
-
-section:has(.timeline)::before {
-  top: -20px;
-}
-
-section:has(.timeline)::after {
-  bottom: -20px;
-  transform: rotate(180deg);
-}
-
 
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
@@ -491,6 +477,7 @@ footer p{
   }
 
 }
+
 
 
 
