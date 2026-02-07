@@ -35,20 +35,23 @@ body {
 }
 
 .countdown {
-    margin-top: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    background-color: #000;
-    color:#fff;
-    padding:16px 18px;
-    border-radius: 16px;
-    display: inline-block;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  margin-top: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #fff;   /* fondo blanco */
+  color: #000;              /* letras negras */
+  padding: 16px 28px;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 0.95rem;
+
+  /* para que resalte elegante */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .invite-block{
-    margin-top: -40px;
+    margin-top: -50px;
 }
 
 /*CONTENEDOR*/
@@ -465,6 +468,7 @@ footer p{
   }
 
 }
+
 
 
 
