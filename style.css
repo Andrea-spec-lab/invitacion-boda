@@ -318,6 +318,13 @@ section:has(.timeline) {
 }
 
 /*FOTOS*/
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -328,6 +335,7 @@ section:has(.timeline) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+    align-items: stretch;
 }
 
 .block img {
@@ -520,6 +528,7 @@ footer p{
   }
 
   .stack{
+    grid-template-columns: 1fr 1fr; /*Agregado*/
     grid-template-rows: auto;
   }
 
@@ -529,6 +538,28 @@ footer p{
 
 }
 
+/* Celulares pequeños (tipo iPhone SE) */
+@media (max-width: 360px) {
+  .stack {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .block {
+    grid-template-columns: 1fr;
+  }
+
+  .stack {
+    grid-template-rows: auto;
+  }
+
+  .block.left img:first-child,
+  .block.right img:last-child {
+    grid-row: auto;
+  }
+}
 
 
 
