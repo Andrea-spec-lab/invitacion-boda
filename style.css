@@ -15,7 +15,7 @@ body {
 .hero {
     background: #fff;
     text-align: center;
-    padding-top: 15vh;
+    padding-top:20vh;
 }
 
 .hero .hero-img {
@@ -48,7 +48,7 @@ body {
 }
 
 .invite-block{
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 /*CONTENEDOR*/
@@ -104,7 +104,7 @@ body {
 }
 
 .couple {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display',cursive;
     font-size: 42px !important;
     letter-spacing: 3px;
     margin-top: 15px;
@@ -465,6 +465,7 @@ footer p{
   }
 
 }
+
 
 
 
