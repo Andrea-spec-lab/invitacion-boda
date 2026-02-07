@@ -177,6 +177,10 @@ ul {
     padding: 30px 20px;
 }
 
+.event-details {
+  margin-bottom: 50px;
+}
+
 .itinerary-section {
   margin-top: -50px;
     padding-bottom: 5px; 
@@ -350,10 +354,11 @@ section:has(.timeline) {
 .button {
     display: inline-block;
     margin-top: 8px;
-    padding: 6px 14px;
+    padding: 10px 22px;
     border: 1px #000 solid;
     border-radius: 20px;
     text-decoration: none;
+    margin-bottom: 18px;
     font-size: 11px;
     letter-spacing: 1px;
     color: #000;
@@ -523,6 +528,7 @@ footer p{
   }
 
 }
+
 
 
 
