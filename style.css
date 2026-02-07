@@ -19,7 +19,7 @@ body {
     padding-top: 12vh;
 }
 
-.hero .hero-img {
+.wrapper .hero-img {
     position: absolute;
     top: 20px;     
     left: 50%;      
@@ -448,6 +448,7 @@ footer p{
   }
 
 }
+
 
 
 
