@@ -50,7 +50,7 @@ body {
 }
 
 .invite-block{
-    margin-top: -25px;
+    margin-top: 15px;
 }
 
 /*CONTENEDOR*/
@@ -119,7 +119,7 @@ body {
 
 /*DIVIDER*/
 .divider{
-    width: 70px;
+    width: 80px;
     height: 1.2px;
     background: #000;
     margin: 5px auto;
@@ -466,6 +466,7 @@ footer p{
   }
 
 }
+
 
 
 
