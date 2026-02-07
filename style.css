@@ -15,12 +15,14 @@ body {
 .hero {
     background: #fff;
     text-align: center;
-    padding-top:15vh;
+    padding-top:40px;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 .hero .hero-img {
     position: absolute;
-    top: 20px;     
+    top: 10px;     
     left: 50%;      
     width: 28px;      
     opacity: 0.9; 
@@ -53,7 +55,6 @@ body {
 
 /*CONTENEDOR*/
 .wrapper {
-    margin-top: 25px;
     margin: auto;
     background-color:#fff;
 }
@@ -67,7 +68,7 @@ body {
 /*PADRES*/
 
 .us {
-    margin-top:-40px !important;
+    margin-top:0px !important;
     margin-bottom: 8px;
     font-size: 14px;
     letter-spacing: 2px;
@@ -465,6 +466,7 @@ footer p{
   }
 
 }
+
 
 
 
