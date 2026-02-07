@@ -60,7 +60,7 @@ body {
 /*PADRES*/
 
 .us {
-    margin-top:-70px !important;
+    margin-top:-40px !important;
     margin-bottom: 8px;
     font-size: 14px;
     letter-spacing: 2px;
@@ -68,7 +68,7 @@ body {
 
 .blessing {
     font-style: italic;
-    margin-top: -20px !important;
+    margin-top: 10px !important;
 }
 
 .parents-names {
@@ -458,6 +458,7 @@ footer p{
   }
 
 }
+
 
 
 
