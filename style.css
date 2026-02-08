@@ -114,7 +114,7 @@ body {
 
 .couple {
     font-family: "Kaisei Tokumin", serif !important; 
-    font-weight: 700;
+    font-weight: 800;
   font-style: normal;
     font-size: 42px !important;
     letter-spacing: 3px;
@@ -553,6 +553,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
