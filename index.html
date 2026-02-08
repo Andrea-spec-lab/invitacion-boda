@@ -189,25 +189,27 @@
         </section>
 `
                 <!-- RSVP -->
+<!-- RSVP -->
 <section class="section reveal rsvp-section">
   <h2><strong>Confirmar asistencia</strong></h2>
   <p class="small">Favor de confirmar antes del 10 de junio de 2026</p>
 
   <form id="rsvpForm" class="rsvp-form">
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
 
-    <select name="asistencia" required>
+    <select name="asistencia" id="asistencia" required>
       <option value="">¿Asistirá?</option>
       <option value="Sí">Sí</option>
       <option value="No">No</option>
     </select>
 
-    <input type="number" name="personas" placeholder="Número de personas" min="1" required>
+    <input type="number" name="personas" id="personas" placeholder="Número de personas" min="1" required readonly>
 
     <button type="submit">Confirmar</button>
     <p id="formMsg"></p>
   </form>
 </section>
+
 
 
         <section class="section no-kids">
@@ -271,39 +273,73 @@ document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
   .forEach(el => observer.observe(el));
 
         //RSVP 
+<script>
 const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
 const button = form.querySelector("button");
-        
+
+const inputNombre = document.getElementById("nombre");
+const inputPersonas = document.getElementById("personas");
+
+const URL = "https://script.google.com/macros/s/AKfycby28cRqBJ5LI8CgH1fsk_k2NqR1vyiy93IROZfhu-MGjnTIPGCkJ1MC78KBE30a0ogJ/exec";
+
+// 👉 Buscar asientos cuando escriben su nombre
+inputNombre.addEventListener("blur", () => {
+  const nombre = inputNombre.value.trim();
+  if (!nombre) return;
+
+  fetch(URL + "?nombre=" + encodeURIComponent(nombre))
+    .then(res => res.json())
+    .then(data => {
+      if (data.asientos) {
+        inputPersonas.value = data.asientos;
+        inputPersonas.readOnly = true;
+      } else {
+        inputPersonas.value = "";
+        inputPersonas.readOnly = false;
+        alert("Tu nombre no está en la lista de invitados 😅");
+      }
+    })
+    .catch(() => {
+      alert("Error al consultar la lista de invitados");
+    });
+});
+
+
+// 👉 Enviar formulario
 form.addEventListener("submit", function(e){
   e.preventDefault();
 
-      button.disabled = true;
+  button.disabled = true;
   msg.textContent = "Confirmando...";
   msg.style.color = "#555";
+
   const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbxH5rSPX3M3ISzBYQP6Ici11fnEX2yuOzr5seGp__Bw1AHsI14cMIDe__O2lOI_-lr0LQ/exec", {
+  fetch(URL, {
     method: "POST",
     body: formData
   })
   .then(() => {
     msg.textContent = "¡Gracias por confirmar tu asistencia!";
-     msg.style.color = "#000";
+    msg.style.color = "#000";
     form.reset();
     button.disabled = false;
   })
   .catch(() => {
     msg.textContent = "Error al enviar. Intenta de nuevo.";
-          msg.style.color = "red";
+    msg.style.color = "red";
     button.disabled = false;
   });
 });
+</script>
+
     </script>
 
     </body>
 
 </html>
+
 
 
 
