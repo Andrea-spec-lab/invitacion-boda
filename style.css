@@ -7,7 +7,9 @@
 body {
     background: #f2ede8;
     color: #111;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  font-style: normal;
     letter-spacing: 0.5px;
 }
 
@@ -111,7 +113,7 @@ body {
 
 .couple {
     font-family: "Kaisei Tokumin", serif !important; 
-    font-weight: 400;
+    font-weight: 700;
   font-style: normal;
     font-size: 42px !important;
     letter-spacing: 3px;
@@ -139,7 +141,9 @@ h1 {
 }
 
 .section h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
     font-size: 1rem;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -167,7 +171,9 @@ ul {
 
 /* Título */
 .it-title{
-  font-family: 'Playfair Display', serif;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -388,7 +394,9 @@ section:has(.timeline) {
   padding: 10px 14px;
   border-radius: 20px;
   border: 1px solid #ccc;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.9rem;
 }
 
@@ -544,6 +552,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
