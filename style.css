@@ -78,13 +78,14 @@ body {
 .us {
     margin-top:0px !important;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
 }
 
 .blessing {
-    font-style: italic;
+    font-style: normal;
     margin-top: 10px !important;
+    font-size: 12px;
 }
 
 .parents-names {
@@ -99,7 +100,7 @@ body {
 }
 
 .role {
-    font-size: 10px !important;
+    font-size: 11px !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #999;
@@ -143,7 +144,7 @@ h1 {
 
 .section h2 {
     font-family: "Abhaya Libre", serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
     font-size: 1rem;
     letter-spacing: 3px;
@@ -553,6 +554,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
