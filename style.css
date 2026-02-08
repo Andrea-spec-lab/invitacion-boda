@@ -110,7 +110,9 @@ body {
 }
 
 .couple {
-    font-family: "Petit Formal Script",cursive !important;
+    font-family: "Kaisei Tokumin", serif !important; 
+    font-weight: 400;
+  font-style: normal;
     font-size: 42px !important;
     letter-spacing: 3px;
     margin-top: 15px;
@@ -542,6 +544,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
