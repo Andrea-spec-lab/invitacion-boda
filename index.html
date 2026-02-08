@@ -196,20 +196,22 @@
   <form id="rsvpForm" class="rsvp-form">
     <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
 
+    <p id="asientosMsg" class="small" style="display:none;"></p>
+
     <select name="asistencia" id="asistencia" required>
       <option value="">¿Asistirá?</option>
       <option value="Sí">Sí</option>
       <option value="No">No</option>
     </select>
 
-    <input type="number" name="personas" id="personas" placeholder="Número de personas" min="1" required readonly>
+    <input type="number" name="personas" id="personas"
+           placeholder="Número de personas"
+           min="0" required>
 
     <button type="submit">Confirmar</button>
     <p id="formMsg"></p>
   </form>
 </section>
-
-
 
         <section class="section no-kids">
             <h2><strong>SIN NIÑOS</strong></h2>
@@ -279,10 +281,15 @@ const button = form.querySelector("button");
 
 const inputNombre = document.getElementById("nombre");
 const inputPersonas = document.getElementById("personas");
+const selectAsistencia = document.getElementById("asistencia");
+const asientosMsg = document.getElementById("asientosMsg");
 
 const URL = "https://script.google.com/macros/s/AKfycby28cRqBJ5LI8CgH1fsk_k2NqR1vyiy93IROZfhu-MGjnTIPGCkJ1MC78KBE30a0ogJ/exec";
 
-// 👉 Buscar asientos cuando escriben su nombre
+let asientosMaximos = 0;
+let nombreValido = false;
+
+// 👉 Buscar asientos
 inputNombre.addEventListener("blur", () => {
   const nombre = inputNombre.value.trim();
   if (!nombre) return;
@@ -291,11 +298,20 @@ inputNombre.addEventListener("blur", () => {
     .then(res => res.json())
     .then(data => {
       if (data.asientos) {
-        inputPersonas.value = data.asientos;
-        inputPersonas.readOnly = true;
+        asientosMaximos = parseInt(data.asientos);
+        nombreValido = true;
+
+        asientosMsg.style.display = "block";
+        asientosMsg.textContent = "Tienes " + asientosMaximos + " asientos reservados.";
+
+        inputPersonas.value = asientosMaximos;
+        inputPersonas.max = asientosMaximos;
       } else {
+        nombreValido = false;
+        asientosMaximos = 0;
+        asientosMsg.style.display = "none";
         inputPersonas.value = "";
-        inputPersonas.readOnly = false;
+        inputPersonas.removeAttribute("max");
         alert("Tu nombre no está en la lista de invitados 😅");
       }
     })
@@ -305,9 +321,59 @@ inputNombre.addEventListener("blur", () => {
 });
 
 
+// 👉 Si ponen NO → personas = 0
+selectAsistencia.addEventListener("change", () => {
+  if (selectAsistencia.value === "No") {
+    inputPersonas.value = 0;
+    inputPersonas.readOnly = true;
+  } else {
+    inputPersonas.readOnly = false;
+    if (asientosMaximos > 0) {
+      inputPersonas.value = asientosMaximos;
+    }
+  }
+});
+
+
+// 👉 No permitir más de sus asientos
+inputPersonas.addEventListener("input", () => {
+  if (asientosMaximos && inputPersonas.value > asientosMaximos) {
+    inputPersonas.value = asientosMaximos;
+    alert("Solo tienes " + asientosMaximos + " asientos disponibles 😉");
+  }
+});
+
+
+// 👉 Evitar doble confirmación (localStorage)
+function yaConfirmo(nombre) {
+  return localStorage.getItem("confirmado_" + nombre.toLowerCase());
+}
+
+function marcarConfirmado(nombre) {
+  localStorage.setItem("confirmado_" + nombre.toLowerCase(), "true");
+}
+
+
 // 👉 Enviar formulario
 form.addEventListener("submit", function(e){
   e.preventDefault();
+
+  const nombre = inputNombre.value.trim();
+
+  if (!nombreValido) {
+    alert("Primero escribe un nombre válido de la lista.");
+    return;
+  }
+
+  if (yaConfirmo(nombre)) {
+    alert("Ya registramos tu confirmación 💖");
+    return;
+  }
+
+  if (asientosMaximos && inputPersonas.value > asientosMaximos) {
+    alert("No puedes confirmar más personas de las que tienes asignadas.");
+    return;
+  }
 
   button.disabled = true;
   msg.textContent = "Confirmando...";
@@ -320,9 +386,11 @@ form.addEventListener("submit", function(e){
     body: formData
   })
   .then(() => {
-    msg.textContent = "¡Gracias por confirmar tu asistencia!";
+    msg.textContent = "Confirmación guardada 💍✨";
     msg.style.color = "#000";
+    marcarConfirmado(nombre);
     form.reset();
+    asientosMsg.style.display = "none";
     button.disabled = false;
   })
   .catch(() => {
@@ -332,12 +400,12 @@ form.addEventListener("submit", function(e){
   });
 });
 
-
     </script>
 
     </body>
 
 </html>
+
 
 
 
