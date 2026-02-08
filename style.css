@@ -129,7 +129,7 @@ body {
 
 /*DIVIDER*/
 .divider{
-    width: 150px;
+    width: 200px;
     height: 1.2px;
     background: #000;
     margin: 18px auto 8px auto;
@@ -143,7 +143,7 @@ h1 {
 
 .section h2 {
     font-family: "Abhaya Libre", serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
     font-size: 1rem;
     letter-spacing: 3px;
@@ -299,7 +299,7 @@ section:has(.timeline) {
 }
 
 .event .content p{ margin:0; }
-.event .content strong{ font-weight:700; }
+.event .content strong{ font-weight:600; }
 
 /* ============ Responsive (móvil) ============ */
 @media (max-width: 600px){
@@ -386,7 +386,7 @@ section:has(.timeline) {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 500px;
+  max-width: 400px;
   margin: 20px auto 0;
 }
 
@@ -553,6 +553,7 @@ footer p{
     height: auto;
   }
 }
+
 
 
 
