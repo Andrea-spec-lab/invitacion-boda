@@ -147,31 +147,6 @@
                 </p>
         </section>
 
-    <!-- RSVP -->
-<section class="section reveal rsvp-section">
-  <h2><strong>Confirmar asistencia</strong></h2>
-  <p class="small">Favor de confirmar antes del 10 de junio de 2026</p>
-
-  <form id="rsvpForm" class="rsvp-form">
-    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
-
-    <p id="asientosMsg" class="small" style="display:none;"></p>
-
-    <select name="asistencia" id="asistencia" required>
-      <option value="">¿Asistirá?</option>
-      <option value="Sí">Sí</option>
-      <option value="No">No</option>
-    </select>
-
-    <input type="number" name="personas" id="personas"
-           placeholder="Número de personas"
-           min="0" required>
-
-    <button type="submit">Confirmar</button>
-    <p id="formMsg"></p>
-  </form>
-</section>
-
                 <!-- GALERIA -->
         <section class="section reveal">
             <h2><strong>Nuestros momentos</strong></h2>
@@ -213,7 +188,30 @@
             </div>
         </section>
 
+ <!-- RSVP -->
+<section class="section reveal rsvp-section">
+  <h2><strong>Confirmar asistencia</strong></h2>
+  <p class="small">Favor de confirmar antes del 10 de junio de 2026</p>
 
+  <form id="rsvpForm" class="rsvp-form">
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
+
+    <p id="asientosMsg" class="small" style="display:none;"></p>
+
+    <select name="asistencia" id="asistencia" required>
+      <option value="">¿Asistirá?</option>
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+    </select>
+
+    <input type="number" name="personas" id="personas"
+           placeholder="Número de personas"
+           min="0" required>
+
+    <button type="submit">Confirmar</button>
+    <p id="formMsg"></p>
+  </form>
+</section>
 
         <section class="section no-kids">
             <h2><strong>SIN NIÑOS</strong></h2>
@@ -407,6 +405,7 @@ form.addEventListener("submit", function(e){
     </body>
 
 </html>
+
 
 
 
