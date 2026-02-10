@@ -336,6 +336,9 @@ section:has(.timeline) {
   }
   .event .time{ font-size:1rem; margin-bottom:5px; }
   .event i{ font-size:18px; }
+    .rsvp-form{
+        width: 92%
+    }
 }
 
 .dress-img {
@@ -588,6 +591,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
