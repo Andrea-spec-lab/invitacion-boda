@@ -169,10 +169,10 @@ ul {
 }
 
 .dress-section {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
-.dress-section p{
+.dress-section p {
     margin: 4px 0;
 }
 
@@ -566,6 +566,7 @@ footer p{
         height: auto;
     }
 }
+
 
 
 
