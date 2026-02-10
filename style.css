@@ -227,7 +227,7 @@ section:has(.timeline) {
     margin: 0 auto; 
     
   position: relative;
-  width: 100%;
+  width: 95%;
   max-width: 800px;
   display: grid;
   grid-template-columns: 1fr 2rem 1fr;
@@ -325,6 +325,7 @@ section:has(.timeline) {
     column-gap:14px;
     row-gap:22px;
     padding:0 6px;
+      width: 92%;
   }
   .timeline > .event{
     grid-column: 1 / -1; /* mantener cada evento en su propia fila */
@@ -584,6 +585,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
