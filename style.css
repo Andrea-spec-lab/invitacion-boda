@@ -213,7 +213,7 @@ ul {
 
 section:has(.timeline) {
   background: #f7f4ef;
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
@@ -224,6 +224,7 @@ section:has(.timeline) {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     width: 100%;
     max-width: 650px;
+    margin: 0 auto; 
     
   position: relative;
   width: 100%;
@@ -583,6 +584,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
