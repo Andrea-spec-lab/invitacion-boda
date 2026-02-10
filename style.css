@@ -558,14 +558,15 @@ footer p{
   }
 
   .gallery img {
-    max-height:55vh;
+    max-height:60vh;
       object-fit:cover;
   }
 
     .block img {
-        height: 200;
+        height: 200px;
     }
 }
+
 
 
 
