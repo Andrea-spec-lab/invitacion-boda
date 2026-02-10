@@ -201,7 +201,7 @@ ul {
 }
 
 .event-details {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .itinerary-section {
@@ -218,7 +218,7 @@ section:has(.timeline) {
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
     background: #fff;
-  padding: 30px 0 30px 0;
+  padding: 30px 0 50px 0;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     width: 100%;
@@ -583,6 +583,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
