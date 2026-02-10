@@ -205,7 +205,7 @@ ul {
 }
 
 .itinerary-section {
-  margin-top: -70px;
+    margin-top: 0;
     padding-bottom: 5px; 
     display: flex;
     justify-content: center;
@@ -228,7 +228,6 @@ section:has(.timeline) {
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
   position: relative;
-  margin: 40px auto;
   width: 100%;
   max-width: 800px;
   display: grid;
@@ -585,78 +584,3 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
