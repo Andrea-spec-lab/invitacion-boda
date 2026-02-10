@@ -192,7 +192,7 @@ ul {
   font-size: 1.3rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin: 0 0 20px 0;
   text-align: center;
 }
 
@@ -201,7 +201,7 @@ ul {
 }
 
 .event-details {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .itinerary-section {
@@ -583,5 +583,6 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
