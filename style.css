@@ -202,6 +202,8 @@ ul {
 .itinerary-section {
   margin-top: -50px;
     padding-bottom: 5px; 
+    display: flex;
+    justify-conten: center;
 }
 
 .timeline {
@@ -209,6 +211,9 @@ ul {
   padding: 15px 0;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 section:has(.timeline) {
@@ -566,6 +571,7 @@ footer p{
         height: 200px;
     }
 }
+
 
 
 
