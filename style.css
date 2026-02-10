@@ -393,6 +393,10 @@ section:has(.timeline) {
   grid-row: span 2;
 }
 
+.block,
+.stack { margin: 0;
+       padding: 0; }
+
 @media (max-width: 600px) {
   .block {
     grid-template-columns: 1fr;
@@ -578,6 +582,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
