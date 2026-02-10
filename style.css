@@ -416,6 +416,9 @@ section:has(.timeline) {
     max-height:55vh;
       object-fit:cover;
   }
+    .gallery{
+        padding-top:20px;
+        padding-bottom:20px;
 }
 
 .event-details .button{
@@ -582,6 +585,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
