@@ -443,6 +443,7 @@ padding: 5px 0 !important;
   gap: 12px;
   max-width: 400px;
   margin: 20px auto 0;
+ width: 90%;
 }
 
 .rsvp-form input,
@@ -587,6 +588,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
