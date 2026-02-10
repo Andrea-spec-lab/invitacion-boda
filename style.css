@@ -424,6 +424,7 @@ section:has(.timeline) {
     margin-bottom: 18px;
     font-size: 13px;
     letter-spacing: 1px;
+    color: black; 
 }
 
 /*RSVP*/
@@ -577,6 +578,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
