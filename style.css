@@ -436,9 +436,6 @@ padding: 5px 0 !important;
 }
 
 /*RSVP*/
-
-.rsvp-section 
-{ padding: 5px 0 !important;}
     
 .rsvp-form {
   display: flex;
@@ -590,6 +587,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
