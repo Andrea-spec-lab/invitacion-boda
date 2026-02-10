@@ -168,6 +168,14 @@ ul {
     color: #555;
 }
 
+.dress-section {
+    padding-bottom: 10px;
+}
+
+.dress-section p{
+    margin: 4px 0;
+}
+
 
 /* ===================== ITINERARIO ===================== */
 
@@ -558,6 +566,7 @@ footer p{
         height: auto;
     }
 }
+
 
 
 
