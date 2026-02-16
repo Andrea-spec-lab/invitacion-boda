@@ -337,6 +337,12 @@ section:has(.timeline) {
   line-height: 1.5;
 }
 
+.dress-colors {
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
 /* Círculos */
 .color-circle{
   width: 16px;
@@ -565,6 +571,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
