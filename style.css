@@ -335,6 +335,7 @@ section:has(.timeline) {
   max-width: 320px;
   margin: 0 auto 10px auto;
   line-height: 1.5;
+text-align:center;
 }
 
 .dress-colors {
@@ -348,7 +349,7 @@ section:has(.timeline) {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #bbb;
+  border: 1.2px solid #bbb;
 }
 
 
@@ -571,6 +572,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
