@@ -141,16 +141,7 @@ ul {
     font-size: 0.9rem;
     color: #555;
 }
-.dress-section {
-    padding-bottom: 0px !important;
-    margin-bottom: 0px !important;
-}
-.dress-section + section {
-    padding-top: 5px !important;
-}
-.dress-section p {
-    margin: 4px 0;
-}
+
 /* ===================== ITINERARIO ===================== */
 /* Título */
 .it-title{
@@ -323,35 +314,38 @@ section:has(.timeline) {
   display: block;
 }
 
+.dress-section{
+  background: #f7f4ef;
+  padding: 30px 20px 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
 /* Texto "Formal" */
 .dress-type{
-  font-size: 1rem;
-  margin: 5px 0 10px 0;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin: 6px 0 12px 0;
 }
 
 /* Texto aclaratorio */
 .dress-note{
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #555;
-  max-width: 300px;
-  justify-content: center !important;
-  line-height: 1.4;
-}
-
-/* Contenedor de colores */
-.dress-colors{
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  max-width: 320px;
+  margin: 0 auto 10px auto;
+  line-height: 1.5;
 }
 
 /* Círculos */
 .color-circle{
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
 }
+
 
 /* Colores */
 .color-circle.white{
@@ -572,3 +566,4 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
