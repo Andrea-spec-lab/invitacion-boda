@@ -312,8 +312,8 @@ section:has(.timeline) {
 .dress-note{
   font-size: 0.85rem;
   color: #555;
-  max-width: 320px;
-  margin: 0 auto 10px auto;
+  max-width: 280px;
+  margin: 0 auto;
   line-height: 1.5;
 text-align:center;
 }
@@ -552,6 +552,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
