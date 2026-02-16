@@ -276,11 +276,11 @@ section:has(.timeline) {
 
 /* Icono específico */
 .icon-tornaboda{
-  background-image: url("Fotos/tornaboda.png");
+  background-image: url("Fotos/dance_8904190.png");
 }
 
 .icon-vals{
-  background-image: url("Fotos/vals.png");
+  background-image: url("Fotos/people_10048200.png");
 }
 
 
@@ -566,4 +566,5 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
