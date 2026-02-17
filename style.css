@@ -145,7 +145,7 @@ ul {
     justify-content: center;
 }
 section:has(.timeline) {
-  background: #ddd;
+  background: #dcdcdc;
     padding: 20px 10px;
 }
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
@@ -361,7 +361,7 @@ padding: 5px 0 !important;
 }
 
 .section:has(.gallery) {
-  background: #ddd;  /* mismo crema del itinerario */
+  background: #DCDCDC;  /* mismo crema del itinerario */
   padding: 30px 15px;
 }
 
@@ -496,7 +496,7 @@ width: 90%;
 }
 
 .countdown-section {
-  background: #ddd;
+  background: #dcdcdc;
   padding: 40px 10px;
   text-align: center;
 }
@@ -588,3 +588,4 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
