@@ -488,6 +488,7 @@ width: 90%;
   color: #444;
 }
 
+
 .countdown {
   display: flex;
   justify-content: center;
@@ -504,7 +505,6 @@ width: 90%;
 .countdown .segment strong {
   font-size: 2.4rem
 }
-
 .countdown-section .corner-img {
     position: absolute;
     bottom: 10px;     
@@ -569,6 +569,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
