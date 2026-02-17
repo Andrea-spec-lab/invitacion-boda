@@ -29,7 +29,7 @@ body {
 
 .hero .hero-img {
     position: absolute;
-    top: 10px;     
+    top: 15px;     
     left: 50%;      
     width: 28px;      
     opacity: 0.9;
@@ -48,9 +48,7 @@ body {
 
 .us-img {
   width: 100%;
-  max-width: 600px; 
   border-radius: 6px;
-  object-fit: cover;
 }
     
 .us {
@@ -590,6 +588,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
