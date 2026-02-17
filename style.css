@@ -351,6 +351,23 @@ text-align:center;
   gap: 12px;
 padding: 5px 0 !important;
 }
+
+.section:has(.gallery) {
+  background: #f7f4ef;   /* mismo crema del itinerario */
+  padding: 30px 15px;
+}
+
+.section:has(.gallery) .gallery {
+  background: #fff;
+  padding: 12px;
+  border-radius: 14px;
+}
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
 .block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -545,6 +562,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
