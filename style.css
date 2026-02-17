@@ -79,8 +79,9 @@ body {
   display: block;
   text-align: center;
     padding: 40px 20px;
-    margin-top: 0;
+    margin-top: -20px;
 }
+
 /*CONTENEDOR*/
 .wrapper {
     margin: auto;
@@ -589,6 +590,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
