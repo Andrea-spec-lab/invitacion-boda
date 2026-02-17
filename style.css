@@ -5,6 +5,9 @@
 }
 body {
     background: #f2ede8;
+ background-image: url("Fotos/grain.jpg");
+  background-repeat: repeat;
+  background-size: 200px;
     color: #111;
     font-family: "Abhaya Libre", serif;
   font-weight: 400;
@@ -548,6 +551,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
