@@ -16,7 +16,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("Fotos/grain.png");
+  background-image: url("Fotos/grain2.jpg");
   background-repeat: repeat;
   background-size: 200px 200px;
   opacity: 0.05;   /* elegante, tipo papel */
@@ -560,6 +560,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
