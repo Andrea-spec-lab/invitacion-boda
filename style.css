@@ -292,6 +292,9 @@ section:has(.timeline) {
   border-radius: 12px;
   margin: 20px auto;
   max-width: 400px;
+    display:flex;
+align-items:center;
+flex-direction:column;
 }
 
 /* Texto "Formal" */
@@ -545,6 +548,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
