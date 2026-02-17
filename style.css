@@ -39,6 +39,21 @@ body {
  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,1) 100%
+  );
+}
+
+
 .us {
   font-size: 0.9rem;
   letter-spacing: 3px;
@@ -574,6 +589,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
