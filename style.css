@@ -56,6 +56,9 @@ body {
 .wrapper {
     margin: auto;
     background-color:#fff;
+     background-image: url("Fotos/grain.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
 /*SECCIONES*/
 .section {
@@ -551,6 +554,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
