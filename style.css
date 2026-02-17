@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  padding-top: 80px; 
   position: relative;
 }
 .hero .hero-img {
@@ -542,6 +542,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
