@@ -487,20 +487,23 @@ width: 90%;
   margin-bottom: 16px;
   color: #444;
 }
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 .countdown .segment {
-  display: inline-block;
-  margin: 0 12px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;   /* 👈 número arriba, texto abajo */
+  align-items: center;
+  min-width: 60px;
 }
+
 .countdown .segment strong {
-  font-size: 2rem;
-  display: block;
-}
-.countdown .segment small {
-  font-size: 0.75rem;
-  color: #555;
-  letter-spacing: 1px;
-}
+  font-size: 2.4rem
+
 
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -571,6 +574,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
