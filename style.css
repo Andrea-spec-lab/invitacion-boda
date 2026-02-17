@@ -13,20 +13,16 @@ body {
 }
 /*Hero*/
 .hero {
-    background-image: url("Fotos/Editfondo.jpg");
+  position: relative;
+  background-image:
+    linear-gradient(to bottom, 
+      rgba(255,255,255,0) 70%, 
+      rgba(255,255,255,1) 100%
+    ),
+    url("Fotos/Editfondo.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  position: relative;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  background: rgba(255,255,255,0.6);
 }
 
 .hero .hero-img {
@@ -41,7 +37,7 @@ body {
 
     .hero-text {
   position: absolute;
-  top: 14%;              /* 👈 controla qué tan alto queda en el cielo */
+  top: 12%;              /* 👈 controla qué tan alto queda en el cielo */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -72,7 +68,7 @@ body {
     min-height: auto;
   display: flex;
   text-align: center;
-    margin-top: -150px; 
+    margin-top: -170px; 
     padding-top: 120px;
     padding: 40px 20px;
     flex-direction: column;
@@ -587,6 +583,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
