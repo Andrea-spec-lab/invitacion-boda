@@ -18,8 +18,17 @@ body {
   background-position: center;
   min-height: 100vh;
   position: relative;
- border-bottom: 8px solid #ffffff;
 }
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: rgba(255,255,255,0.6);
+}
+
 .hero .hero-img {
     position: absolute;
     top: 10px;     
@@ -577,6 +586,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
