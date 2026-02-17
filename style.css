@@ -88,13 +88,6 @@ body {
     width: 100%;
     border-radius: 4px;
 }
-/*DIVIDER*/
-.divider{
-    width: 200px;
-    height: 1.2px;
-    background: #000;
-    margin: 18px auto 8px auto;
-}
 /*TEXTO*/
 h1 {
     margin-bottom: 6px;
@@ -312,8 +305,8 @@ section:has(.timeline) {
 .dress-note{
   font-size: 0.85rem;
   color: #555;
-  max-width: 280px;
-  margin: 0 auto;
+  max-width: 320px;
+  margin: 0 auto 10px auto;
   line-height: 1.5;
 text-align:center;
 }
@@ -552,6 +545,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
