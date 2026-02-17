@@ -65,9 +65,11 @@ body {
       box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 .invite-block{
-    margin-top: 80px;
-    margin-bottom: 80px;
-    text-align: center;
+    min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 /*CONTENEDOR*/
 .wrapper {
@@ -540,6 +542,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
