@@ -13,7 +13,7 @@ body {
 }
 /*Hero*/
 .hero {
-    background-image: url("Fotos/Editfondo.jpg");
+    background-image: url("Fotos/Editfondo2.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -539,6 +539,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
