@@ -491,6 +491,16 @@ width: 90%;
   font-size: 1.2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
+
+.countdown-section .corner-img {
+    position: absolute;
+    bottom: 10px;     
+    left: 10px;      
+    width: 40px;      
+    opacity: 0.8;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -546,15 +556,3 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
-.no-kids {
-    position: relative;
-}
-.countdown-section .corner-img {
-    position: absolute;
-    bottom: 10px;     
-    left: 10px;      
-    width: 40px;      
-    opacity: 0.8;
-      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
-}
-
