@@ -379,11 +379,7 @@ padding: 5px 0 !important;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-    aspect-ratio: 3/4;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.stack img {
-    aspect-ratio:4/3;
 }
 .stack { /*columan con dos fotos*/
   display: grid;
@@ -562,6 +558,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
