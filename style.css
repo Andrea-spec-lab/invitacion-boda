@@ -17,6 +17,9 @@ body {
 /*Hero*/
 .hero {
     background: #fff;
+     background-image: url("Fotos/grain.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
     text-align: center;
     padding-top:50px;
     padding-bottom: 10px;
@@ -554,6 +557,7 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
+
 
 
 
