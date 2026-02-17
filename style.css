@@ -545,7 +545,7 @@ footer p{
 .no-kids {
     position: relative;
 }
-.no-kids .corner-img {
+.countdown-section .corner-img {
     position: absolute;
     bottom: 10px;     
     left: 10px;      
@@ -553,38 +553,3 @@ footer p{
     opacity: 0.8;
       filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
