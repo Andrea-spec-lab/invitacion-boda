@@ -503,13 +503,8 @@ width: 90%;
 
 .countdown .segment strong {
   font-size: 2.4rem
-
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.04); }
-  100% { transform: scale(1); }
 }
+
 .countdown-section .corner-img {
     position: absolute;
     bottom: 10px;     
@@ -574,6 +569,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
