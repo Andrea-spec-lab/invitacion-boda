@@ -246,6 +246,7 @@ document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
   .forEach(el => observer.observe(el));
         //RSVP
 // RSVP
+// RSVP
 const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
 const button = form.querySelector("button");
@@ -258,6 +259,7 @@ const URL = "https://script.google.com/macros/s/AKfycbxlW66PUAV78wB27GONb0Rxew8s
 
 let asientosMaximos = 0;
 let nombreValido = false;
+let timer = null;
 
 // 🔹 Normalizar nombre: primer nombre + primer apellido
 function normalizarNombre(nombre) {
@@ -278,35 +280,39 @@ function normalizarNombre(nombre) {
   return primerNombre + " " + primerApellido;
 }
 
-// 👉 Buscar asientos
-inputNombre.addEventListener("blur", () => {
-  const nombreOriginal = inputNombre.value.trim();
-  if (!nombreOriginal) return;
+// 👉 Buscar asientos mientras escriben
+inputNombre.addEventListener("input", () => {
+  clearTimeout(timer);
 
-  const nombre = normalizarNombre(nombreOriginal);
+  timer = setTimeout(() => {
+    const nombreOriginal = inputNombre.value.trim();
+    if (nombreOriginal.length < 3) return;
 
-  fetch(URL + "?nombre=" + encodeURIComponent(nombre))
-    .then(res => res.json())
-    .then(data => {
-      if (data.asientos) {
-        asientosMaximos = parseInt(data.asientos);
-        nombreValido = true;
-        asientosMsg.style.display = "block";
-        asientosMsg.textContent = "Tienes " + asientosMaximos + " asientos reservados.";
-        inputPersonas.value = asientosMaximos;
-        inputPersonas.max = asientosMaximos;
-      } else {
-        nombreValido = false;
-        asientosMaximos = 0;
-        asientosMsg.style.display = "none";
-        inputPersonas.value = "";
-        inputPersonas.removeAttribute("max");
-        alert("Tu nombre no está en la lista de invitados 😅");
-      }
-    })
-    .catch(() => {
-      alert("Error al consultar la lista de invitados");
-    });
+    const nombre = normalizarNombre(nombreOriginal);
+
+    fetch(URL + "?nombre=" + encodeURIComponent(nombre))
+      .then(res => res.json())
+      .then(data => {
+        if (data.asientos) {
+          asientosMaximos = parseInt(data.asientos);
+          nombreValido = true;
+          asientosMsg.style.display = "block";
+          asientosMsg.textContent = "Tienes " + asientosMaximos + " asientos reservados.";
+          inputPersonas.value = asientosMaximos;
+          inputPersonas.max = asientosMaximos;
+        } else {
+          nombreValido = false;
+          asientosMaximos = 0;
+          asientosMsg.style.display = "none";
+          inputPersonas.value = "";
+          inputPersonas.removeAttribute("max");
+        }
+      })
+      .catch(() => {
+        console.log("Error al consultar");
+      });
+
+  }, 500); // espera medio segundo después de escribir
 });
 
 // 👉 Si ponen NO → personas = 0
@@ -332,11 +338,11 @@ inputPersonas.addEventListener("input", () => {
 
 // 👉 Evitar doble confirmación (localStorage)
 function yaConfirmo(nombre) {
-  return localStorage.getItem("confirmado_" + nombre.toLowerCase());
+  return localStorage.getItem("confirmado_" + nombre);
 }
 
 function marcarConfirmado(nombre) {
-  localStorage.setItem("confirmado_" + nombre.toLowerCase(), "true");
+  localStorage.setItem("confirmado_" + nombre, "true");
 }
 
 // 👉 Enviar formulario
@@ -363,7 +369,7 @@ form.addEventListener("submit", function(e){
 
   button.disabled = true;
   msg.textContent = "Confirmando...";
-  msg.style.color= "#555";
+  msg.style.color = "#555";
 
   const formData = new FormData(form);
   formData.set("nombre", nombre); // enviamos nombre normalizado
@@ -392,6 +398,7 @@ form.addEventListener("submit", function(e){
     </body>
  
 </html>
+
 
 
 
