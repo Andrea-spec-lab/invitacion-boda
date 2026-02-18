@@ -147,7 +147,7 @@ ul {
 section:has(.timeline) {
   background: #dcdcdc;
     padding: 20px 10px;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 /* Contenedor del timeline: grid de 3 columnas (izq | línea | der) */
 .timeline{
@@ -364,7 +364,7 @@ padding: 5px 0 !important;
 .section:has(.gallery) {
   background: #DCDCDC;  /* mismo crema del itinerario */
   padding: 30px 15px;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .gallery h2 {
@@ -501,7 +501,7 @@ width: 90%;
   background: #dcdcdc;
   padding: 40px 10px;
   text-align: center;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 .countdown-section .small {
   font-size: 1.3rem;
@@ -591,5 +591,6 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
