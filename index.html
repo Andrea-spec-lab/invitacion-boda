@@ -245,6 +245,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
   .forEach(el => observer.observe(el));
         //RSVP
+// RSVP
 const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
 const button = form.querySelector("button");
@@ -252,13 +253,38 @@ const inputNombre = document.getElementById("nombre");
 const inputPersonas = document.getElementById("personas");
 const selectAsistencia = document.getElementById("asistencia");
 const asientosMsg = document.getElementById("asientosMsg");
-const URL = "https://script.google.com/macros/s/AKfycby28cRqBJ5LI8CgH1fsk_k2NqR1vyiy93IROZfhu-MGjnTIPGCkJ1MC78KBE30a0ogJ/exec";
+
+const URL = "https://script.google.com/macros/s/AKfycbxlW66PUAV78wB27GONb0Rxew8sV4t47ojExV_qhhqwelDrQldeyOXQKnseztPhFmL75Q/exec";
+
 let asientosMaximos = 0;
 let nombreValido = false;
+
+// 🔹 Normalizar nombre: primer nombre + primer apellido
+function normalizarNombre(nombre) {
+  const partes = nombre
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .split(/\s+/);
+
+  if (partes.length === 1) {
+    return partes[0];
+  }
+
+  const primerNombre = partes[0];
+  const primerApellido = partes[partes.length - 1];
+
+  return primerNombre + " " + primerApellido;
+}
+
 // 👉 Buscar asientos
 inputNombre.addEventListener("blur", () => {
-  const nombre = inputNombre.value.trim();
-  if (!nombre) return;
+  const nombreOriginal = inputNombre.value.trim();
+  if (!nombreOriginal) return;
+
+  const nombre = normalizarNombre(nombreOriginal);
+
   fetch(URL + "?nombre=" + encodeURIComponent(nombre))
     .then(res => res.json())
     .then(data => {
@@ -282,6 +308,7 @@ inputNombre.addEventListener("blur", () => {
       alert("Error al consultar la lista de invitados");
     });
 });
+
 // 👉 Si ponen NO → personas = 0
 selectAsistencia.addEventListener("change", () => {
   if (selectAsistencia.value === "No") {
@@ -294,42 +321,53 @@ selectAsistencia.addEventListener("change", () => {
     }
   }
 });
+
 // 👉 No permitir más de sus asientos
 inputPersonas.addEventListener("input", () => {
-  if (asientosMaximos && inputPersonas.value > asientosMaximos) {
+  if (asientosMaximos && Number(inputPersonas.value) > asientosMaximos) {
     inputPersonas.value = asientosMaximos;
     alert("Solo tienes " + asientosMaximos + " asientos disponibles 😉");
   }
 });
+
 // 👉 Evitar doble confirmación (localStorage)
 function yaConfirmo(nombre) {
   return localStorage.getItem("confirmado_" + nombre.toLowerCase());
 }
+
 function marcarConfirmado(nombre) {
   localStorage.setItem("confirmado_" + nombre.toLowerCase(), "true");
 }
+
 // 👉 Enviar formulario
 form.addEventListener("submit", function(e){
   e.preventDefault();
-  const nombre = inputNombre.value.trim();
+
+  const nombreOriginal = inputNombre.value.trim();
+  const nombre = normalizarNombre(nombreOriginal);
+
   if (!nombreValido) {
     alert("Primero escribe un nombre válido de la lista.");
     return;
   }
+
   if (yaConfirmo(nombre)) {
     alert("Ya registramos tu confirmación 💖");
     return;
   }
-  if (asientosMaximos && inputPersonas.value > asientosMaximos) {
+
+  if (asientosMaximos && Number(inputPersonas.value) > asientosMaximos) {
     alert("No puedes confirmar más personas de las que tienes asignadas.");
     return;
   }
+
   button.disabled = true;
   msg.textContent = "Confirmando...";
   msg.style.color= "#555";
- 
+
   const formData = new FormData(form);
- 
+  formData.set("nombre", nombre); // enviamos nombre normalizado
+
   fetch(URL, {
     method: "POST",
     body: formData
@@ -354,6 +392,7 @@ form.addEventListener("submit", function(e){
     </body>
  
 </html>
+
 
 
 
