@@ -425,11 +425,13 @@ padding: 5px 0 !important;
 }
 .block img {
   width: 100%;
- aspect-ratio: 3 / 4;
+  height: auto;          /*  respeta si es horizontal o vertical */
   object-fit: cover;
   border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: block;
 }
+
 .stack { /*columan con dos fotos*/
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -452,7 +454,6 @@ padding: 5px 0 !important;
   }
 
   .stack {
-    display: grid;
     grid-template-rows: auto;
   }
 
@@ -461,14 +462,11 @@ padding: 5px 0 !important;
     grid-row: auto;
   }
 
-  .block img {
-    aspect-ratio: 3 / 4;
-  }
-
   .gallery img {
-    max-height: none;   /* evita conflictos */
+    max-height: none;   /* 👈 quita el límite raro */
   }
 }
+
 .event-details .button{
     display: inline-block;
     margin-top: 8px;
@@ -639,6 +637,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
