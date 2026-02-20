@@ -32,7 +32,8 @@ body {
     position: absolute;
     top: 15px;     
     left: 50%;      
-    width: 32px;      
+    width: 40%;
+max-width: 300px;     
     opacity: 0.9;
     transform: translateX(-50%);
     z-index: 5
@@ -605,6 +606,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
