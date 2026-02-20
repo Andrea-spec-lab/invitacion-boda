@@ -32,7 +32,7 @@ body {
   position: absolute;
   top: 5%;            /* un poquito más arriba */
   left: 50%;
-  width: 65%;         /* grande */
+  width: 40%;         
   max-width: 420px;   /* tamaño elegante */
   min-width: 220px;
   opacity: 0.95;
@@ -42,7 +42,7 @@ body {
 
     .hero-text {
   position: absolute;
-  top: 40%;           /* baja el texto */
+  top: 10%;           /* baja el texto */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -623,6 +623,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
