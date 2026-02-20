@@ -463,7 +463,7 @@ padding: 5px 0 !important;
   }
 
   .gallery img {
-    max-height: none;   /* 👈 quita el límite raro */
+    max-height: none;
   }
 }
 
@@ -637,6 +637,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
