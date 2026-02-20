@@ -42,23 +42,13 @@ body {
 
     .hero-text {
   position: absolute;
-  top: 10%;           /* baja el texto */
+  top: 15%;           /* baja el texto */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #444;
   text-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
-
-@media (min-width: 768px) {
-  .hero .hero-img {
-    max-width: 500px;
-  }
-
-  .hero-text {
-    top: 45%;
-  }
-}
 
 .us {
   font-size: 0.9rem;
@@ -623,6 +613,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
