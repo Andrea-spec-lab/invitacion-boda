@@ -29,28 +29,37 @@ body {
 }
 
 .hero .hero-img {
-    position: absolute;
-    top: 15px;     
-    left: 50%;      
-    width: 40%;
-max-width: 3400px;    
-    min-width:200;
-    opacity: 0.9;
-    transform: translateX(-50%);
-    z-index: 5
+  position: absolute;
+  top: 5%;            /* un poquito más arriba */
+  left: 50%;
+  width: 65%;         /* grande */
+  max-width: 420px;   /* tamaño elegante */
+  min-width: 220px;
+  opacity: 0.95;
+  transform: translateX(-50%);
+  z-index: 5;
 }
 
     .hero-text {
-        position: absolute; 
-  top: 12%;              /* 👈 controla qué tan alto queda en el cielo */
+  position: absolute;
+  top: 40%;           /* baja el texto */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #444;
- text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+@media (min-width: 768px) {
+  .hero .hero-img {
+    max-width: 500px;
+  }
+
+  .hero-text {
+    top: 45%;
+  }
 }
 
-    
 .us {
   font-size: 0.9rem;
   letter-spacing: 3px;
@@ -614,6 +623,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
