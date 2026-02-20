@@ -41,7 +41,7 @@ body {
 
  .hero-text {
   position: absolute;
-  top: 15%;           /* baja el texto */
+  top: 10%;           /* baja el texto */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -635,6 +635,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
