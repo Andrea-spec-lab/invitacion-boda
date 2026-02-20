@@ -206,6 +206,7 @@ Gracias por entender y acompañarnos en este día tan especial.
                 ¡Los esperamos con mucho cariño!
             </p>
         </footer>
+  
     <script>
     //Countdown
         const weddingDate = new Date("2026-06-26T17:00:00");
@@ -247,8 +248,7 @@ const observer = new IntersectionObserver((entries) => {
 // Elementos que animarán
 document.querySelectorAll(".reveal, .hero, .fade-in, .timeline")
   .forEach(el => observer.observe(el));
-        //RSVP
-// RSVP
+    
 // RSVP
 const form = document.getElementById("rsvpForm");
 const msg = document.getElementById("formMsg");
@@ -264,7 +264,7 @@ let asientosMaximos = 0;
 let nombreValido = false;
 let timer = null;
 
-// 🔹 Normalizar nombre: primer nombre + primer apellido
+//  Normalizar nombre: primer nombre + primer apellido
 function normalizarNombre(nombre) {
   const partes = nombre
     .toLowerCase()
@@ -283,7 +283,7 @@ function normalizarNombre(nombre) {
   return primerNombre + " " + primerApellido;
 }
 
-// 👉 Buscar asientos mientras escriben
+//  Buscar asientos mientras escriben
 inputNombre.addEventListener("input", () => {
   clearTimeout(timer);
 
@@ -318,7 +318,7 @@ inputNombre.addEventListener("input", () => {
   }, 500); // espera medio segundo después de escribir
 });
 
-// 👉 Si ponen NO → personas = 0
+// Si ponen NO → personas = 0
 selectAsistencia.addEventListener("change", () => {
   if (selectAsistencia.value === "No") {
     inputPersonas.value = 0;
@@ -331,7 +331,7 @@ selectAsistencia.addEventListener("change", () => {
   }
 });
 
-// 👉 No permitir más de sus asientos
+//  No permitir más de sus asientos
 inputPersonas.addEventListener("input", () => {
   if (asientosMaximos && Number(inputPersonas.value) > asientosMaximos) {
     inputPersonas.value = asientosMaximos;
@@ -339,7 +339,7 @@ inputPersonas.addEventListener("input", () => {
   }
 });
 
-// 👉 Evitar doble confirmación (localStorage)
+// Evitar doble confirmación (localStorage)
 function yaConfirmo(nombre) {
   return localStorage.getItem("confirmado_" + nombre);
 }
@@ -401,6 +401,7 @@ form.addEventListener("submit", function(e){
     </body>
  
 </html>
+
 
 
 
