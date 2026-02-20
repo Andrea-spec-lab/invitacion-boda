@@ -106,7 +106,7 @@ h1 {
 }
 .section p,
 .section li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.35;
     margin: 6px 0;
 }
@@ -637,6 +637,7 @@ footer p{
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
