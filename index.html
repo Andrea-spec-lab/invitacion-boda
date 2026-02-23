@@ -266,6 +266,7 @@ let timer = null;
 
 //  Normalizar nombre: primer nombre + primer apellido
 function normalizarNombre(nombre) {
+function normalizarNombre(nombre) {
   const partes = nombre
     .toLowerCase()
     .normalize("NFD")
@@ -273,16 +274,26 @@ function normalizarNombre(nombre) {
     .trim()
     .split(/\s+/);
 
-  if (partes.length === 1) {
-    return partes[0];
+  let primerNombre = partes[0];
+  let primerApellido = partes.length > 1 ? partes[partes.length - 1] : "";
+
+  function capitalizar(palabra) {
+    return palabra.charAt(0).toUpperCase() + palabra.slice(1);
   }
 
-  const primerNombre = partes[0];
-  const primerApellido = partes[partes.length - 1];
-
-  return primerNombre + " " + primerApellido;
+  if (primerApellido) {
+    return capitalizar(primerNombre) + " " + capitalizar(primerApellido);
+  } else {
+    return capitalizar(primerNombre);
+  }
 }
+function nombreTieneApellido(nombre) {
+  const partes = nombre
+    .trim()
+    .split(/\s+/);
 
+  return partes.length >= 2;
+}
 //  Buscar asientos mientras escriben
 inputNombre.addEventListener("input", () => {
   clearTimeout(timer);
@@ -355,6 +366,11 @@ form.addEventListener("submit", function(e){
   const nombreOriginal = inputNombre.value.trim();
   const nombre = normalizarNombre(nombreOriginal);
 
+if (!nombreTieneApellido(nombreOriginal)) {
+  alert("Por favor escribe tu nombre y tu apellido 💖");
+  return;
+}
+
   if (!nombreValido) {
     alert("Primero escribe un nombre válido de la lista.");
     return;
@@ -401,6 +417,7 @@ form.addEventListener("submit", function(e){
     </body>
  
 </html>
+
 
 
 
