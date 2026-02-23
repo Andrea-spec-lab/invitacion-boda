@@ -345,7 +345,7 @@ selectAsistencia.addEventListener("change", () => {
 inputPersonas.addEventListener("input", () => {
   if (asientosMaximos && Number(inputPersonas.value) > asientosMaximos) {
     inputPersonas.value = asientosMaximos;
-    alert("Solo tienes " + asientosMaximos + " asientos disponibles 😉");
+    alert("Solo tienes " + asientosMaximos + " asientos disponibles.");
   }
 });
 
@@ -371,7 +371,7 @@ if (!nombreTieneApellido(nombreOriginal)) {
 }
 
   if (!nombreValido) {
-    alert("Primero escribe un nombre válido de la lista.");
+    alert("Primero escribe un nombre válido.");
     return;
   }
 
@@ -416,6 +416,7 @@ if (!nombreTieneApellido(nombreOriginal)) {
     </body>
  
 </html>
+
 
 
 
