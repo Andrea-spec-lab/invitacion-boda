@@ -411,6 +411,9 @@ padding: 5px 0 !important;
   padding: 30px 15px;
     border-radius: 4px;
 }
+.section.reveal {
+  opacity: 1; /* evita que el fondo desaparezca */
+}
 
 .gallery h2 {
   text-align: center;
