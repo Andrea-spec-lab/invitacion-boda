@@ -33,8 +33,7 @@ body {
     position: absolute; 
     top: 15px; 
     left: 50%; 
-    width: 40%;
-    max-width: 200px;
+    width: 180px;
     opacity: 0.9; 
     transform: translateX(-50%); 
     z-index: 5 
